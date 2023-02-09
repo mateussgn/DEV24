@@ -1,0 +1,15 @@
+runtime:
+  type: service
+  template: service-springboot
+  cpu: 500m
+  memory: 256Mi
+
+my-object-action-user-agent:
+  type: oauthApplicationUserAgent
+  scopes:
+    - C_Employee20097.everything
+
+my-object-action-object-action:
+  type: objectAction
+  resourcePath: /myobject/action
+  oAuth2ApplicationExternalReferenceCode: my-object-action-user-agent
